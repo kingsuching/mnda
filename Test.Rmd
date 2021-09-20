@@ -1,0 +1,19 @@
+---
+title: "Test"
+author: "Sucheen Sundaram"
+date: "9/20/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(Frost2021Package)
+```
+
+```{r}
+read.csv("./CalPolyAnnualSecurityReport.csv") %>%
+  group_by(Year) %>%
+  summarise(n())
+```
+
