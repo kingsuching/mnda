@@ -14,6 +14,6 @@ library(Frost2021Package)
 ```{r}
 read.csv("./CalPolyAnnualSecurityReport.csv") %>%
   group_by(Year) %>%
-  summarise(n())
+  summarise(n() %% 4)
 ```
 
